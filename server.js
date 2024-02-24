@@ -108,7 +108,7 @@ app.post(
       if (exists)
         return res
           .status(409)
-          .json({ err: true, errors: [{ msg: "Team name is already registered!" }] });
+          .json({ err: true, errors: [{ msg: "Ce nom d'équipe est déjà enregistré. Veuillez choisir un autre nom." }] });
 
       // const exists1 = await Participant.findOne({
       //   phone: req.body.phone,
