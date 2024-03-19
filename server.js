@@ -63,8 +63,9 @@ app.post(
         name: req.body.name.toLowerCase(),
         email: req.body.email.toLowerCase(),
         phone: req.body.phone,
-        availability: req.body.availability,
+        availability: req.body.availability || "",
         year: req.body.year,
+        availability2: req.body.availability2 || "",
       });
 
       const result = await newParticipant.save();
